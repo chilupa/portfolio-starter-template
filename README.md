@@ -1,6 +1,8 @@
 # Gatsby Portfolio Starter Template
 
-Impress your portfolio with this game chaning template. You can customize it however you want.
+Impress your portfolio with this game changer starter template :fire:
+
+You can customize it however you want - changing the layout, colors, styling and what not!
 
 Run your app in development mode using the below command
 
