@@ -7,7 +7,10 @@ const IndexPage = () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Gatsby Starter Template</title>
-      <link rel="canonical" href="" />
+      <link
+        rel="canonical"
+        href="https://chilupa.github.io/portfolio-starter-template/"
+      />
     </Helmet>
   </Layout>
 )
