@@ -1,0 +1,18 @@
+.SocialMedia {
+    font-size: 1.5rem;
+    margin-left: 0.8rem;
+}
+
+.SocialMedia:hover {
+    color: #1b1b18;
+    cursor: pointer;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.AnchorStyling {
+    color: #1b1b18 !important;
+    text-decoration: none;
+    background-image: none;
+}

@@ -1,6 +1,36 @@
 $primary-color: #f4511e;
 $text-color: white;
 
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
 html {
     background-color: $primary-color;
 }
@@ -10,14 +40,21 @@ body {
 }
 
 h1 {
+    font-size: 2rem;
     color: white;
+    margin-bottom: 0.2rem;
 }
+
+h3 {
+    margin-top: 0;
+}
+
 
 .Layout {
     padding: 1rem;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -100px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
 }
