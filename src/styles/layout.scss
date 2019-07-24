@@ -1,5 +1,6 @@
 $primary-color: #f4511e;
-$text-color: white;
+$secondary-color: white;
+
 
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
@@ -7,6 +8,10 @@ $text-color: white;
     }
 
     @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
         @content;
     }
 
@@ -18,9 +23,6 @@ $text-color: white;
         @content;
     }
 
-    @keyframes #{$animation-name} {
-        @content;
-    }
 }
 
 @mixin animation($str) {
@@ -36,17 +38,25 @@ html {
 }
 
 body {
-    color: white;
+    color: $secondary-color;
 }
 
-h1 {
+h1.FullName {
     font-size: 2rem;
-    color: white;
+    color: $secondary-color;
     margin-bottom: 0.2rem;
 }
 
 h3 {
     margin-top: 0;
+}
+
+h1 {
+    color: $secondary-color;
+}
+
+.CustomLine {
+    margin-top: 2rem;
 }
 
 
@@ -57,4 +67,59 @@ h3 {
     min-height: 100vh;
     justify-content: center;
     text-align: center;
+}
+
+@include keyframes(rotate-360) {
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Proceed {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: $secondary-color;
+    cursor: pointer;
+
+    &:hover {
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-duration: 0.5s;
+        animation-name: rotate-360;
+    }
+}
+
+.PageLayout {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 3rem auto
+}
+
+.LinkStyle {
+    background-image: none;
+}
+
+.AboutMe,
+.Projects,
+.Contact {
+    text-align: left;
+}
+
+.Navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.PageNav {
+    color: white;
+    text-shadow: none;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, white 1px, white 2px, rgba(0, 0, 0, 0) 2px);
+
+    &:hover {
+        color: black;
+    }
 }
