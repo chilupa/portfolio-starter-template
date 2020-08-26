@@ -1,9 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import SocialMedia from "../components/SocialMedia"
+import SocialMedia from "../SocialMedia/SocialMedia"
 import { IoIosArrowDroprightCircle } from "react-icons/io"
-import "../styles/layout.scss"
+import "../../styles/layout.scss"
 
 const Layout = () => (
   <div className="Layout">
